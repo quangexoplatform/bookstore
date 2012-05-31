@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.exoplatform</groupId>
+    <artifactId>exo.parent</artifactId>
+    <version>7.1</version>
+  </parent>
+  <groupId>org.exoplatform.bookstore</groupId>
+  <artifactId>bookstore</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>eXo Book Store</name>
+  <description>eXo Book Store</description>
+  <url>http://wiki.exoplatform.org</url>
+
+<properties>
+      <org.exoplatform.kernel.version>2.3.8-GA-SNAPSHOT</org.exoplatform.kernel.version>
+      <org.exoplatform.core.version>2.4.8-GA-SNAPSHOT</org.exoplatform.core.version>
+      <org.exoplatform.ws.version>2.2.8-GA-SNAPSHOT</org.exoplatform.ws.version>
+      <org.exoplatform.jcr.version>1.14.8-GA-SNAPSHOT</org.exoplatform.jcr.version>
+      <org.exoplatform.exopackage.version>1.1.4</org.exoplatform.exopackage.version>
+      <org.jibx.version>1.2.2</org.jibx.version>
+      <org.shindig.version>2.0.2</org.shindig.version>
+      <nl.captcha.simplecaptcha.version>1.1.1-GA-Patch01</nl.captcha.simplecaptcha.version>
+      <org.gatein.dep.version>1.1.0-GA</org.gatein.dep.version>
+      <org.gatein.common.version>2.0.4-GA</org.gatein.common.version>
+      <org.gatein.wci.version>2.1.0-GA</org.gatein.wci.version>
+      <org.gatein.pc.version>2.3.0-GA</org.gatein.pc.version>
+      <org.picketlink.idm>1.3.0.GA</org.picketlink.idm>
+      <org.gatein.mop.version>1.1.1-GA</org.gatein.mop.version>
+      <org.gatein.wsrp.version>2.1.0-GA</org.gatein.wsrp.version>
+      <org.slf4j.version>1.5.8</org.slf4j.version>
+      <commons-pool.version>1.5.5</commons-pool.version>
+      <rhino.version>1.6R5</rhino.version>
+      <org.codehaus.groovy.version>1.7.6</org.codehaus.groovy.version>
+      <javax.servlet.version>2.5</javax.servlet.version>
+      <version.chromattic>1.1.2</version.chromattic>
+      <version.reflext>1.1.0</version.reflext>
+      <org.staxnav.version>0.9.6</org.staxnav.version>
+      <jcip.version>1.0</jcip.version>
+
+      <!-- EXOGTN-106 : forced at packaging level -->
+      <antlr.version>2.7.6rc1</antlr.version>
+      <asm.version>3.1</asm.version>
+      <cglib.version>2.2</cglib.version>
+      <com.sun.xml.bind.version>2.1.7</com.sun.xml.bind.version>
+      <commons-digester.version>1.8.1</commons-digester.version>
+      <commons-dbcp.version>1.2.2</commons-dbcp.version>
+      <commons-httpclient.version>3.1</commons-httpclient.version>
+      <exo.tool.webunit.version>1.0.0</exo.tool.webunit.version>
+      <html-parser.version>1.6</html-parser.version>
+      <javassist.version>3.14.0-GA</javassist.version>
+      <jcr.version>1.0</jcr.version>
+      <org.jaxb2.version>0.7.4</org.jaxb2.version>
+      <stax.version>1.0</stax.version>
+      <version.pdfbox>1.6.0</version.pdfbox>
+</properties>
+<build>
+      <resources>
+         <resource>
+            <directory>src/main/java</directory>
+            <includes>
+               <include>**/*.properties</include>
+               <include>**/*.xml</include>
+               <include>**/*.xsd</include>
+            </includes>
+         </resource>
+         <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+               <include>**/*.*</include>
+            </includes>
+         </resource>
+      </resources>
+      <testResources>
+         <testResource>
+            <directory>src/test/java</directory>
+            <includes>
+               <include>**/*.properties</include>
+               <include>**/*.xml</include>
+            </includes>
+         </testResource>
+         <testResource>
+            <directory>src/test/resources</directory>
+         </testResource>
+      </testResources>
+      <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+    </plugins>
+   </build>
+  
+  <modules>
+    <module>services</module>
+    <module>portlet</module>
+  </modules>
+
+</project>
